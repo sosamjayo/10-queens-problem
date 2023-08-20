@@ -48,9 +48,11 @@ int	can_put_queen(int *queens, int n, int position)
 	i = 0;
 	while (i < n)
 	{
-		if ((n + position) == i + queens[i])
-			return (0);
-		if ((n - position) == i - queens[i])
+		// if ((n + position) == i + queens[i])
+		// 	return (0);
+		// if ((n - position) == i - queens[i])
+		// 	return (0);
+		if (abs(n - i) == abs(position - queens[i]))
 			return (0);
 		if (position == queens[i])
 			return (0);
